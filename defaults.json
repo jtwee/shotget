@@ -1,0 +1,12 @@
+{
+  "dateSubfolder": true,
+  "onloadScript": "onload.js",
+  "outputFolder": "shots",
+  "parallel": 8,
+  "sameDomainDelay": 0,
+  "threshold": 5,
+  "timeout": 30,
+  "viewportHeight": 1024,
+  "viewportWidth": 1280,
+  "wait": 10
+}

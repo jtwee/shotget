@@ -1,0 +1,16 @@
+{
+  "dateSubfolder": true,
+  "onloadScript": "onload.js",
+  "outputFolder": "screenshots-json",
+  "parallel": 4,
+  "sameDomainDelay": 10,
+  "threshold": 10,
+  "timeout": 30,
+  "viewportHeight": 1080,
+  "viewportWidth": 1920,
+  "wait": 10,
+  "urls": [
+    "https://www.google.com",
+    "https://www.wikipedia.org"
+  ]
+}

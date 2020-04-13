@@ -1,0 +1,35 @@
+# Example config file in YAML
+
+# Should the output be placed in date/time subfolders?
+dateSubfolder: true,
+
+# JS file containing scripts to run on each page load prior to taking screenshot
+onloadScript: onload.js
+
+# Folder (relative to local path) where screenshot(s) will be stored
+outputFolder: screenshots-yaml
+
+# Run this number of parallel requests, set to 1 for sequential processing
+parallel: 8
+
+# Delay (in seconds) between requests to same domain
+sameDomainDelay: 0
+
+# Difference threshold as a percentage (0-100)
+threshold: 5
+
+# Timeout setting for each task in queue
+timeout: 60
+
+# Viewport height for screenshot(s)
+viewportHeight: 1024
+
+# Viewport width for screenshot(s)
+viewportWidth: 1280
+
+# Time (in seconds) to wait after loading to take the screenshot
+wait: 10
+
+urls:
+  - https://www.google.com
+  - https://www.wikipedia.org
