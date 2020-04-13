@@ -149,6 +149,8 @@ const init = (options = {}) => {
 
     job.execTime = new Date();
 
+    job.onloadScript = job.onloadScript.startsWith('/') ? job.onloadScript : `${process.cwd()}/${job.onloadScript}`;
+
     return initScreenshotFolder(job) && validate(job);
 };
 

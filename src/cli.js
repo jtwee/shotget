@@ -63,7 +63,7 @@ const parseArgs = (args) => {
         },
         'onload-script': {
             describe: 'JS file containing scripts to run on each page load prior to taking screenshot',
-            default: `${process.cwd()}/${defaults.onloadScript}`,
+            default: `./${defaults.onloadScript}`,
             defaultDescription: `./${defaults.onloadScript}`,
             requiresArg: true,
         },

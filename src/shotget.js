@@ -12,6 +12,11 @@ const utils = require('./utils.js');
 
 const getScreenshots = async (job) => {
     const output = {};
+    let onloadScript;
+
+    if (fs.existsSync(job.onloadScript) && fs.accessSync(job.onloadScript, fs.constants.R_OK) === undefined) {
+        onloadScript = require(job.onloadScript);
+    }
 
     const cluster = await Cluster.launch({
         concurrency: Cluster.CONCURRENCY_PAGE,
@@ -43,7 +48,9 @@ const getScreenshots = async (job) => {
                 console.log(`${chalk.greenBright(figures.tick)} ${targetUrl} ${figures.arrowRight} ${relativeFilename}`);
             });
             await page.goto(targetUrl);
-            page.evaluate(require(job.onloadScript));
+            if (onloadScript) {
+                page.evaluate(onloadScript);
+            }
             await page.waitFor(job.wait * 1000);
             await page.screenshot({
                 path: outputFilename,
