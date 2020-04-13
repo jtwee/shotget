@@ -32,4 +32,4 @@ wait: 10
 
 urls:
   - https://www.google.com
-  - https://www.wikipedia.org
+  - https://en.wikipedia.org/wiki/Google
