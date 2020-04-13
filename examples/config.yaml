@@ -1,7 +1,7 @@
 # Example config file in YAML
 
 # Should the output be placed in date/time subfolders?
-dateSubfolder: true,
+dateSubfolder: true
 
 # JS file containing scripts to run on each page load prior to taking screenshot
 onloadScript: onload.js
