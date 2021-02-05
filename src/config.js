@@ -12,7 +12,7 @@ const configDefaults = require('../defaults.json');
 const readConfig = (filename) => {
     if (filename && fs.existsSync(filename) && fs.accessSync(filename, fs.constants.R_OK) === undefined) {
         if (/\.ya?ml$/.test(filename)) {
-            return yaml.safeLoad(fs.readFileSync(filename, 'utf8'), { json: true });
+            return yaml.load(fs.readFileSync(filename, 'utf8'), { json: true });
         } else if (/\.json$/.test(filename)) {
             return JSON.parse(fs.readFileSync(filename, 'utf8'));
         }
