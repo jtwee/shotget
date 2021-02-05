@@ -51,7 +51,7 @@ const getScreenshots = async (job) => {
             if (onloadScript) {
                 page.evaluate(onloadScript);
             }
-            await page.waitFor(job.wait * 1000);
+            await page.waitForTimeout(job.wait * 1000);
             await page.screenshot({
                 path: outputFilename,
                 fullPage: true,
